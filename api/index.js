@@ -29,6 +29,11 @@ app.listen(port, () => {
 
 const User = require("./models/user");
 const Todo = require("./models/todo");
+app.get("/", (req, res) => {
+     res.status(200).json({
+          message: "Welcome to the API"
+     })
+});
 
 app.post("/register", async (req, res) => {
      try {
